@@ -76,6 +76,12 @@
 </head>
 <body>
 
+    <!-- مشغل الصوت (مخفي) -->
+    <!-- لو الأغنية ملف عندك في الفولدر سميها song.mp3 أو حط الرابط المباشر مكان song.mp3 -->
+    <audio id="mySong" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- الشاشة الأولى (الافتتاحية) -->
     <div class="container" id="welcome-screen">
         <h1>عندك مفاجأة هنا! 🎁</h1>
@@ -106,6 +112,10 @@
         function startSurprise() {
             document.getElementById('welcome-screen').classList.add('hidden');
             document.getElementById('surprise-screen').classList.remove('hidden');
+            
+            // تشغيل الأغنية عند الضغط
+            var song = document.getElementById('mySong');
+            song.play();
         }
     </script>
 </body>
