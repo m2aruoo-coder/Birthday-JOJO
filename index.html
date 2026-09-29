@@ -73,8 +73,9 @@
             display: none;
         }
         audio {
-            margin-bottom: 15px;
             width: 100%;
+            margin-top: 10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -91,11 +92,9 @@
     <div class="container hidden" id="surprise-screen">
         <h1>كل سنة وأنتي طيبة يا حبيبتي! 🎉❤️</h1>
         
-        <!-- مشغل الصوت برابط مباشر -->
+        <!-- مشغل الصوت بالرابط المباشر للأغنية -->
         <audio id="mySong" controls loop preload="auto">
-            <source src="https://files.catbox.moe/7h486v.mp3" type="audio/mpeg">
-            <source src="song.mp3" type="audio/mpeg">
-            <source src="song" type="audio/mpeg">
+            <source src="https://files.catbox.moe/k7dert.mp3" type="audio/mpeg">
         </audio>
 
         <!-- معرض الصور -->
@@ -110,7 +109,7 @@
             كل سنة وأنتي أجمل حاجة حصلت في حياتي. ربنا يخليكي ليا ويديم وجودك وسعادتك جمبي دايماً. اليوم ده مش بس عيد ميلادك، ده اليوم اللي أتنور فيه العالم بوجودك! ✨
         </p>
 
-        <button class="btn" onclick="alert('بحبك جداً! 💕')">دوسة أخير هسيبها للحب ❤️</button>
+        <button class="btn" onclick="alert('بحبك جداً! 💕')">دوسة أخير هسيبها للحب ❤️️</button>
     </div>
 
     <script>
@@ -120,7 +119,7 @@
             
             var song = document.getElementById('mySong');
             song.play().catch(function(error) {
-                console.log("إذن الصوت محتاج ضغطة يدوية من المستخدم على زر التشغيل");
+                console.log("إذن الصوت محتاج ضغطة على مشغل الصوت في حال تم حظره أوتوماتيكياً من المتصفح");
             });
         }
     </script>
