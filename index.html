@@ -72,8 +72,9 @@
         .hidden {
             display: none;
         }
-        .audio-box {
-            margin-bottom: 20px;
+        audio {
+            margin-bottom: 15px;
+            width: 100%;
         }
     </style>
 </head>
@@ -90,13 +91,12 @@
     <div class="container hidden" id="surprise-screen">
         <h1>كل سنة وأنتي طيبة يا حبيبتي! 🎉❤️</h1>
         
-        <!-- مشغل الصوت بالملف المحلي -->
-        <div class="audio-box">
-            <audio controls loop autoplay id="mySong" style="width: 100%;">
-                <source src="song.mp3" type="audio/mpeg">
-                <source src="song" type="audio/mpeg">
-            </audio>
-        </div>
+        <!-- مشغل الصوت برابط مباشر -->
+        <audio id="mySong" controls loop preload="auto">
+            <source src="https://files.catbox.moe/7h486v.mp3" type="audio/mpeg">
+            <source src="song.mp3" type="audio/mpeg">
+            <source src="song" type="audio/mpeg">
+        </audio>
 
         <!-- معرض الصور -->
         <div class="gallery">
@@ -119,7 +119,9 @@
             document.getElementById('surprise-screen').classList.remove('hidden');
             
             var song = document.getElementById('mySong');
-            song.play();
+            song.play().catch(function(error) {
+                console.log("إذن الصوت محتاج ضغطة يدوية من المستخدم على زر التشغيل");
+            });
         }
     </script>
 </body>
