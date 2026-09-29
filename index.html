@@ -72,15 +72,14 @@
         .hidden {
             display: none;
         }
+        audio {
+            margin-top: 15px;
+            width: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-
-    <!-- مشغل الصوت (مخفي) -->
-    <!-- لو الأغنية ملف عندك في الفولدر سميها song.mp3 أو حط الرابط المباشر مكان song.mp3 -->
-    <audio id="mySong" loop>
-        <source src="song.mp3" type="audio/mpeg">
-    </audio>
 
     <!-- الشاشة الأولى (الافتتاحية) -->
     <div class="container" id="welcome-screen">
@@ -93,8 +92,14 @@
     <div class="container hidden" id="surprise-screen">
         <h1>كل سنة وأنتي طيبة يا حبيبتي! 🎉❤️</h1>
         
+        <!-- مشغل الصوت -->
+        <audio id="mySong" controls loop>
+            <source src="song.mp3" type="audio/mpeg">
+            <source src="song" type="audio/mpeg">
+        </audio>
+
         <!-- معرض الصور -->
-        <div class="gallery">
+        <div class="gallery" style="margin-top: 15px;">
             <img src="https://i.ibb.co/DHQwqCvk/photo1.jpg" alt="photo1">
             <img src="https://i.ibb.co/wrY8M3M9/photo2.jpg" alt="photo2">
             <p style="font-size: 1.2rem; color: #d63384; font-weight: bold; margin-top: 5px;">ذكرى جميلة 13/7 ❤️</p>
@@ -113,7 +118,6 @@
             document.getElementById('welcome-screen').classList.add('hidden');
             document.getElementById('surprise-screen').classList.remove('hidden');
             
-            // تشغيل الأغنية عند الضغط
             var song = document.getElementById('mySong');
             song.play();
         }
