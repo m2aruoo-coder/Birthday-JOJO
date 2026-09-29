@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد سعيد يا أغلى ما عندي! ❤️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 500px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            color: #d63384;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        p.message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+            max-height: 350px;
+        }
+        .btn {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+        }
+        .btn:hover {
+            background-color: #b8256f;
+            transform: scale(1.05);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الشاشة الأولى (الافتتاحية) -->
+    <div class="container" id="welcome-screen">
+        <h1>عندك مفاجأة هنا! 🎁</h1>
+        <p class="message">في حاجة صغيرة عملتها علشانك في اليوم المميز ده...</p>
+        <button class="btn" onclick="startSurprise()">دوسي هنا ❤️</button>
+    </div>
+
+    <!-- الشاشة الرئيسية للمفاجأة -->
+    <div class="container hidden" id="surprise-screen">
+        <h1>كل سنة وأنتي طيبة يا حبيبتي! 🎉❤️</h1>
+        
+        <!-- صوركم (استبدل الروابط باسم ملفات الصور بتاعتك) -->
+        <div class="gallery">
+            <img src="photo1.jpg" alt="ذكرى جميلة">
+            <img src="photo2.jpg" alt="ذكرى ثانية">
+        </div>
+
+        <!-- رسالتك الشخصية لها -->
+        <p class="message">
+            كل سنة وأنتي أجمل حاجة حصلت في حياتي. ربنا يخليكي ليا ويديم وجودك وسعادتك جمبي دايماً. اليوم ده مش بس عيد ميلادك، ده اليوم اللي أتنور فيه العالم بوجودك! ✨
+        </p>
+
+        <button class="btn" onclick="alert('بحبك جداً! 💕')">دوسة أخير هسيبها للحب ❤️</button>
+    </div>
+
+    <script>
+        function startSurprise() {
+            document.getElementById('welcome-screen').classList.add('hidden');
+            document.getElementById('surprise-screen').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
