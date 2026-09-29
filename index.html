@@ -72,10 +72,8 @@
         .hidden {
             display: none;
         }
-        audio {
-            margin-top: 15px;
-            width: 100%;
-            border-radius: 10px;
+        .audio-box {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -92,14 +90,16 @@
     <div class="container hidden" id="surprise-screen">
         <h1>كل سنة وأنتي طيبة يا حبيبتي! 🎉❤️</h1>
         
-        <!-- مشغل الصوت -->
-        <audio id="mySong" controls loop>
-            <source src="song.mp3" type="audio/mpeg">
-            <source src="song" type="audio/mpeg">
-        </audio>
+        <!-- مشغل الصوت بالملف المحلي -->
+        <div class="audio-box">
+            <audio controls loop autoplay id="mySong" style="width: 100%;">
+                <source src="song.mp3" type="audio/mpeg">
+                <source src="song" type="audio/mpeg">
+            </audio>
+        </div>
 
         <!-- معرض الصور -->
-        <div class="gallery" style="margin-top: 15px;">
+        <div class="gallery">
             <img src="https://i.ibb.co/DHQwqCvk/photo1.jpg" alt="photo1">
             <img src="https://i.ibb.co/wrY8M3M9/photo2.jpg" alt="photo2">
             <p style="font-size: 1.2rem; color: #d63384; font-weight: bold; margin-top: 5px;">ذكرى جميلة 13/7 ❤️</p>
